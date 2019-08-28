@@ -2886,6 +2886,21 @@ hr {
   }
 }
 
+/* EDIT */
+
+.has-hover-image {
+  .hover-image {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  &:hover, &:focus {
+    .hover-image {
+      opacity: 1;
+    }
+  }
+}
+
+
 .list-view-item {
   margin-bottom: $gutter-site-mobile;
 
@@ -7060,7 +7075,8 @@ $toolbar-height-small: 46px;
   &:hover,
   &:focus-within {
     .product-card__image-wrapper {
-      opacity: 0.8;
+      /* EDIT */
+      /*opacity: 0.8;*/
     }
 
     .product-card__title {

@@ -1500,5 +1500,56 @@
         "default": true
       }
     ]
+  },
+  {
+    "name": {
+      "da": "Custom options",
+      "de": "Custom options",
+      "en": "Custom options",
+      "es": "Custom options",
+      "fi": "Custom options",
+      "fr": "Custom options",
+      "hi": "Custom options",
+      "it": "Custom options",
+      "ja": "Custom options",
+      "ko": "Custom options",
+      "ms": "Custom options",
+      "nb": "Custom options",
+      "nl": "Custom options",
+      "pt-BR": "Custom options",
+      "pt-PT": "Custom options",
+      "sv": "Custom options",
+      "th": "Custom options",
+      "zh-CN": "Custom options",
+      "zh-TW": "Custom options"
+    },
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "hide_home_link",
+        "label": {
+          "da": "Hide home link on nav",
+          "de": "Hide home link on nav",
+          "en": "Hide home link on nav",
+          "es": "Hide home link on nav",
+          "fi": "Hide home link on nav",
+          "fr": "Hide home link on nav",
+          "hi": "Hide home link on nav",
+          "it": "Hide home link on nav",
+          "ja": "Hide home link on nav",
+          "ko": "Hide home link on nav",
+          "ms": "Hide home link on nav",
+          "nb": "Hide home link on nav",
+          "nl": "Hide home link on nav",
+          "pt-BR": "Hide home link on nav",
+          "pt-PT": "Hide home link on nav",
+          "sv": "Hide home link on nav",
+          "th": "Hide home link on nav",
+          "zh-CN": "Hide home link on nav",
+          "zh-TW": "Hide home link on nav"
+        },
+        "default": true
+      }
+    ]
   }
 ]

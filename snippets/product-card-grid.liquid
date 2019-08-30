@@ -1,4 +1,4 @@
-<div class="grid-view-item{% unless product.available %} grid-view-item--sold-out{% endunless %} product-card{% if product.images.size > 1 %} has-hover-image{% endif %}" data-product-card>
+<div class="grid-view-item{% unless product.available %} grid-view-item--sold-out{% endunless %} product-card{% if section.settings.allow_mouseover_image %} has-hover-image{% endif %}" data-product-card>
   <a class="grid-view-item__link grid-view-item__image-container full-width-link" href="{{ product.url | within: collection }}">
     <span class="visually-hidden">{{ product.title }}</span>
   </a>
@@ -24,7 +24,7 @@
               data-image>
 
         <!-- HOVER IMAGE -->
-              {% if product.images.size > 1 %}
+              {% if section.settings.allow_mouseover_image %}
                 {% for image in product.images %}
                   {% if image != product.featured_image %}
         <img id="{{ image.id }}"

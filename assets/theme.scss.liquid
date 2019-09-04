@@ -1812,7 +1812,11 @@ a[href^="tel"] {
 }
 
 /*================ Buttons ================*/
-.btn {
+
+/* EDIT */
+.btn,
+.extra-product-buttons a,
+.extra-product-buttons span {
   @include user-select();
   @include prefix(appearance, none, webkit moz spec);
   display: inline-block;
@@ -1869,7 +1873,10 @@ a[href^="tel"] {
   }
 }
 
-.btn--secondary-accent {
+/* EDIT */
+.btn--secondary-accent,
+.extra-product-buttons a,
+.extra-product-buttons span {
   background-color: $color-body;
   color: $color-btn-primary;
   border-color: $color-btn-primary;
@@ -1898,6 +1905,20 @@ a[href^="tel"] {
     background-color: transparent;
     color: $color-small-button-text-border-focus;
     border-color: $color-small-button-text-border-focus;
+  }
+}
+
+/* EDIT: Extra buttons */
+
+.extra-product-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 5px -5px -5px;
+
+  a, span {
+    margin: 5px;
+    flex-grow: 1;
   }
 }
 

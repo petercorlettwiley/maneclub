@@ -190,11 +190,27 @@
                   {% include 'icon-spinner' %}
                 </span>
               </button>
+
+          {%- comment -%}
+            EDIT: custom product button links
+          {%- endcomment -%}
+
+          {% assign buttons = product.metafields.Buttons %}
+          {% assign button_one = 'Button One' %}
+          {% assign button_two = 'Button Two' %} 
+          {% if product.metafields.Buttons %}
+            <div class="extra-product-buttons">
+              {{ buttons[button_one] }}
+              {{ buttons[button_two] }}
+            </div>
+          {% endif %}
+
               {% if section.settings.enable_payment_button %}
                 {{ form | payment_button }}
               {% endif %}
             </div>
           {% endform %}
+
         </div>
 
         {%- comment -%}

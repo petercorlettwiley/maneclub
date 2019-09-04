@@ -1,4 +1,4 @@
-<div class="grid grid--no-gutters image-bar image-bar--{{ section.settings.section_height }}">
+<div class="grid grid--no-gutters image-bar image-bar--{{ section.settings.section_height }}{% if section.settings.full-width-small%} full_width_images{% endif %}">
   {% case section.blocks.size %}
     {% when 1 %}
       {%- assign column_size = '' -%}
@@ -232,6 +232,32 @@
           "value": "x-large"
         }
       ]
+    },
+    {
+      "type": "checkbox",
+      "id": "full-width-small",
+      "label": {
+        "da": "Allow images to go full width on small viewports",
+        "de": "Allow images to go full width on small viewports",
+        "en": "Allow images to go full width on small viewports",
+        "es": "Allow images to go full width on small viewports",
+        "fi": "Allow images to go full width on small viewports",
+        "fr": "Allow images to go full width on small viewports",
+        "hi": "Allow images to go full width on small viewports",
+        "it": "Allow images to go full width on small viewports",
+        "ja": "Allow images to go full width on small viewports",
+        "ko": "Allow images to go full width on small viewports",
+        "ms": "Allow images to go full width on small viewports",
+        "nb": "Allow images to go full width on small viewports",
+        "nl": "Allow images to go full width on small viewports",
+        "pt-BR":  "Allow images to go full width on small viewports",
+        "pt-PT":  "Allow images to go full width on small viewports",
+        "sv":  "Allow images to go full width on small viewports",
+        "th":  "Allow images to go full width on small viewports",
+        "zh-CN":  "Allow images to go full width on small viewports",
+        "zh-TW":  "Allow images to go full width on small viewports"
+      },
+      "default": true
     }
   ],
   "blocks": [

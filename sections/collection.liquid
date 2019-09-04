@@ -13,7 +13,7 @@
       {%- assign grid_item_width = 'medium-up--one-half' -%}
     {% when 3 %}
       {%- assign max_height = 345 -%}
-      {%- assign grid_item_width = 'small--full medium-up--one-third' -%}
+      {%- assign grid_item_width = 'small--one-half medium-up--one-third' -%}
     {% when 4 %}
       {%- assign max_height = 250 -%}
       {%- assign grid_item_width = 'small--one-half medium-up--one-quarter' -%}
@@ -22,9 +22,20 @@
       {%- assign grid_item_width = 'small--one-half medium-up--one-fifth' -%}
   {% endcase %}
 
+  <!-- ALLOW GALLERY SCROLLING -->
+
+  {% if section.settings.allow-gallery-scroll %}
+    <div class="gallery-scroller-container">
+  {% endif %}
+  
+  {% if section.settings.allow-gallery-scroll %}
+    <a href="#" class="gallery-sroller small--show left">{% include 'icon-chevron-left' %}</a>
+  {% endif %}
+  <!-- \ALLOW GALLERY SCROLLING -->
+
   {%- assign product_limit = section.settings.grid | times: section.settings.rows -%}
 
-  <ul class="grid grid--uniform grid--view-items">
+  <ul class="grid grid--uniform grid--view-items{% if section.settings.allow-gallery-scroll %} gallery-scroller-list{% endif %}">
     {% for product in collection.products limit: product_limit %}
       <li class="grid__item grid__item--{{section.id}} {{ grid_item_width }}">
         {% include 'product-card-grid', max_height: max_height %}
@@ -48,6 +59,16 @@
       {% endfor %}
     {% endfor %}
   </ul>
+
+  <!-- ALLOW GALLERY SCROLLING -->
+  {% if section.settings.allow-gallery-scroll %}
+    <a href="#" class="gallery-sroller small--show right">{% include 'icon-chevron-right' %}</a>
+  {% endif %}
+
+  {% if section.settings.allow-gallery-scroll %}
+    </div>
+  {% endif %}
+  <!-- \ALLOW GALLERY SCROLLING -->
 
   {% if section.settings.show_view_all %}
     <hr class="hr--invisible" aria-hidden="true" />
@@ -291,6 +312,32 @@
         "th": "Allow alternate hover image",
         "zh-CN": "Allow alternate hover image",
         "zh-TW": "Allow alternate hover image"
+      },
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "allow-gallery-scroll",
+      "label": {
+        "da": "Allow side-scrolling on small viewports",
+        "de": "Allow side-scrolling on small viewports",
+        "en": "Allow side-scrolling on small viewports",
+        "es": "Allow side-scrolling on small viewports",
+        "fi": "Allow side-scrolling on small viewports",
+        "fr": "Allow side-scrolling on small viewports",
+        "hi": "Allow side-scrolling on small viewports",
+        "it": "Allow side-scrolling on small viewports",
+        "ja": "Allow side-scrolling on small viewports",
+        "ko": "Allow side-scrolling on small viewports",
+        "ms": "Allow side-scrolling on small viewports",
+        "nb": "Allow side-scrolling on small viewports",
+        "nl": "Allow side-scrolling on small viewports",
+        "pt-BR": "Allow side-scrolling on small viewports",
+        "pt-PT": "Allow side-scrolling on small viewports",
+        "sv": "Allow side-scrolling on small viewports",
+        "th": "Allow side-scrolling on small viewports",
+        "zh-CN": "Allow side-scrolling on small viewports",
+        "zh-TW": "Allow side-scrolling on small viewports"
       },
       "default": true
     }

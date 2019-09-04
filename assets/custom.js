@@ -34,18 +34,47 @@ var loadScript = function(url, callback){
 
 var customScripts = function($){
 
-  /* homepage grid hover script */
+  /* homepage grid gallery scroller */
 
-  if ($('body').hasClass('template-index')) {
+  var $scroller_exists = false;
+  var $viewport_small = 750;
 
-    $('.index-section ul.grid .product-card.has-hover-image').each(function(){
+  if ($('.gallery-sroller').length > 0) {
+    $scroller_exists = true;
+    $('.gallery-sroller').click(function(){
+      var $first_item = $('.gallery-scroller-list').find('li').first();
+      var $last_item = $('.gallery-scroller-list').find('li').last();
 
+      if($(this).hasClass('left')) {
+        console.log($first_item);
+        $('.gallery-scroller-list').prepend($last_item);
+      } else if ($(this).hasClass('right')) {
+        $('.gallery-scroller-list').append($first_item);
+      }
     });
-
   }
 
-};
+  function adjustGalleryScroller(screen_width) {
+    if (screen_width <= $viewport_small) {
+      var $item_height = $('.gallery-scroller-list').find('.grid__item').outerHeight();
+      $('.gallery-scroller-list').css('height', $item_height);
+    }
+  }
 
+  adjustGalleryScroller($(window).width());
+
+
+  /* browser size tests */
+
+  $(window).resize(function(){
+    var win = $(this); //this = window
+  
+    if ($scroller_exists) {
+      adjustGalleryScroller(win.width());
+    }
+  });
+
+};
 
 //
 // script loading for jquery if not supported

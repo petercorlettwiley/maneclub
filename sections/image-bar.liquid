@@ -1,4 +1,4 @@
-<div class="grid grid--no-gutters image-bar image-bar--{{ section.settings.section_height }}{% if section.settings.full-width-small%} full_width_images{% endif %}">
+<div class="grid grid--no-gutters image-bar image-bar--{{ section.settings.section_height }}{% if section.settings.full-width-small%} full_width_images{% endif %}{% if section.settings.three-per-row-small%} three_per_row_small{% endif %}{% if section.settings.single-row-large%} single_row_large{% endif %}{% if section.settings.additional-classes%} {{ section.settings.additional-classes }}{% endif %}">
   {% case section.blocks.size %}
     {% when 1 %}
       {%- assign column_size = '' -%}
@@ -7,7 +7,7 @@
     {% when 3 %}
       {%- assign column_size = 'medium-up--one-third' -%}
     {% else %}
-      {%- assign column_size = 'medium-up--one-quarter' -%}
+      {%- assign column_size = 'medium-up--one-third' -%}
   {% endcase %}
 
   {% for block in section.blocks %}
@@ -83,7 +83,7 @@
     "zh-TW": "圖庫"
   },
   "class": "index-section index-section--flush",
-  "max_blocks": 4,
+  "max_blocks": 8,
   "settings": [
     {
       "type": "select",
@@ -258,6 +258,83 @@
         "zh-TW":  "Allow images to go full width on small viewports"
       },
       "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "three-per-row-small",
+      "label": {
+        "da": "Force images to be in rows of three on small viewports",
+        "de": "Force images to be in rows of three on small viewports",
+        "en": "Force images to be in rows of three on small viewports",
+        "es": "Force images to be in rows of three on small viewports",
+        "fi": "Force images to be in rows of three on small viewports",
+        "fr": "Force images to be in rows of three on small viewports",
+        "hi": "Force images to be in rows of three on small viewports",
+        "it": "Force images to be in rows of three on small viewports",
+        "ja": "Force images to be in rows of three on small viewports",
+        "ko": "Force images to be in rows of three on small viewports",
+        "ms": "Force images to be in rows of three on small viewports",
+        "nb": "Force images to be in rows of three on small viewports",
+        "nl": "Force images to be in rows of three on small viewports",
+        "pt-BR":  "Force images to be in rows of three on small viewports",
+        "pt-PT":  "Force images to be in rows of three on small viewports",
+        "sv":  "Force images to be in rows of three on small viewports",
+        "th":  "Force images to be in rows of three on small viewports",
+        "zh-CN":  "Force images to be in rows of three on small viewports",
+        "zh-TW":  "Force images to be in rows of three on small viewports"
+      },
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "single-row-large",
+      "label": {
+        "da": "Force images to be in a single row on large viewports",
+        "de": "Force images to be in a single row on large viewports",
+        "en": "Force images to be in a single row on large viewports",
+        "es": "Force images to be in a single row on large viewports",
+        "fi": "Force images to be in a single row on large viewports",
+        "fr": "Force images to be in a single row on large viewports",
+        "hi": "Force images to be in a single row on large viewports",
+        "it": "Force images to be in a single row on large viewports",
+        "ja": "Force images to be in a single row on large viewports",
+        "ko": "Force images to be in a single row on large viewports",
+        "ms": "Force images to be in a single row on large viewports",
+        "nb": "Force images to be in a single row on large viewports",
+        "nl": "Force images to be in a single row on large viewports",
+        "pt-BR":  "Force images to be in a single row on large viewports",
+        "pt-PT":  "Force images to be in a single row on large viewports",
+        "sv":  "Force images to be in a single row on large viewports",
+        "th":  "Force images to be in a single row on large viewports",
+        "zh-CN":  "Force images to be in a single row on large viewports",
+        "zh-TW":  "Force images to be in a single row on large viewports"
+      },
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "additional-classes",
+      "label": {
+        "da": "Additional CSS classes",
+        "de": "Additional CSS classes",
+        "en": "Additional CSS classes",
+        "es": "Additional CSS classes",
+        "fi": "Additional CSS classes",
+        "fr": "Additional CSS classes",
+        "hi": "Additional CSS classes",
+        "it": "Additional CSS classes",
+        "ja": "Additional CSS classes",
+        "ko": "Additional CSS classes",
+        "ms": "Additional CSS classes",
+        "nb": "Additional CSS classes",
+        "nl": "Additional CSS classes",
+        "pt-BR":  "Additional CSS classes",
+        "pt-PT":  "Additional CSS classes",
+        "sv":  "Additional CSS classes",
+        "th":  "Additional CSS classes",
+        "zh-CN":  "Additional CSS classes",
+        "zh-TW":  "Additional CSS classes"
+      }
     }
   ],
   "blocks": [

@@ -1,4 +1,4 @@
-<div class="page-width">
+<div class="page-width{% if template == 'page.about' %} about_page{% endif %}">
   {% if section.settings.title != blank %}
     <div class="section-header text-center">
       <h4 class="h2">{{ section.settings.title | escape }}</h4>
@@ -37,7 +37,7 @@
         {% endunless %}
       {% endif %}
 
-      <div class="custom__item custom__item--{{block.id}} {{ block_width }} {% if block.settings.alignment %}align--{{ block.settings.alignment }}{% endif %}" {{ block.shopify_attributes }}>
+      <div class="custom__item custom__item--{{block.id}} {{ block_width }} {% if block.settings.alignment %}align--{{ block.settings.alignment }}{% endif %}{% if block.settings.horiz-alignment %} horiz-align--{{ block.settings.horiz-alignment }}{% endif %}{% if block.settings.own-line %} own_line{% endif %}" {{ block.shopify_attributes }}>
         <div class="custom__item-inner custom__item-inner--{{ block.type }}"{% if block.type == 'image' %} id="{{ img_wrapper_id }}"{% endif %}>
           {% case block.type %}
             {% when 'image' %}
@@ -589,25 +589,25 @@
           "type": "select",
           "id": "align_text",
           "label": {
-            "da": "Vandret justering",
-            "de": "Horizontale Ausrichtung",
-            "en": "Horizontal alignment",
-            "es": "Alineación horizontal",
-            "fi": "Vaakasuora tasaus",
-            "fr": "Alignement horizontal",
-            "hi": "क्षैतिज संरेखण",
-            "it": "Allineamento orizzontale",
-            "ja": "水平アラインメント",
-            "ko": "가로 정렬",
-            "ms": "Penjajaran mendatar",
-            "nb": "Horisontal justering",
-            "nl": "Horizontaal uitlijnen",
-            "pt-BR": "Alinhamento horizontal",
-            "pt-PT": "Alinhamento horizontal",
-            "sv": "Horisontell justering",
-            "th": "การจัดวางแนวนอน",
-            "zh-CN": "水平对齐",
-            "zh-TW": "水平對齊"
+            "da": "Text alignment",
+            "de": "Text alignment",
+            "en": "Text alignment",
+            "es": "Text alignment",
+            "fi": "Text alignment",
+            "fr": "Text alignment",
+            "hi": "Text alignment",
+            "it": "Text alignment",
+            "ja": "Text alignment",
+            "ko": "Text alignment",
+            "ms": "Text alignment",
+            "nb": "Text alignment",
+            "nl": "Text alignment",
+            "pt-BR": "Text alignment",
+            "pt-PT": "Text alignment",
+            "sv": "Text alignment",
+            "th": "Text alignment",
+            "zh-CN": "Text alignment",
+            "zh-TW": "Text alignment"
           },
           "default": "left",
           "options": [
@@ -684,6 +684,132 @@
               }
             }
           ]
+        },
+        {
+          "type": "select",
+          "id": "horiz-alignment",
+          "label": {
+            "da": "Horizontal alignment",
+            "de": "Horizontal alignment",
+            "en": "Horizontal alignment",
+            "es": "Horizontal alignment",
+            "fi": "Horizontal alignment",
+            "fr": "Horizontal alignment",
+            "hi": "Horizontal alignment",
+            "it": "Horizontal alignment",
+            "ja": "Horizontal alignment",
+            "ko": "Horizontal alignment",
+            "ms": "Horizontal alignment",
+            "nb": "Horizontal alignment",
+            "nl": "Horizontal alignment",
+            "pt-BR": "Horizontal alignment",
+            "pt-PT": "Horizontal alignment",
+            "sv": "Horizontal alignment",
+            "th": "Horizontal alignment",
+            "zh-CN": "Horizontal alignment",
+            "zh-TW": "Horizontal alignment"
+          },
+          "default": "center",
+          "options": [
+            {
+              "value": "left",
+              "label": {
+                "da": "Left",
+                "de": "Left",
+                "en": "Left",
+                "es": "Left",
+                "fi": "Left",
+                "fr": "Left",
+                "hi": "Left",
+                "it": "Left",
+                "ja": "Left",
+                "ko": "Left",
+                "ms": "Left",
+                "nb": "Left",
+                "nl": "Left",
+                "pt-BR": "Left",
+                "pt-PT": "Left",
+                "sv": "Left",
+                "th": "Left",
+                "zh-CN": "Left",
+                "zh-TW": "Left"
+              }
+            },
+            {
+              "value": "center",
+              "label": {
+                "da": "Center",
+                "de": "Center",
+                "en": "Center",
+                "es": "Center",
+                "fi": "Center",
+                "fr": "Center",
+                "hi": "Center",
+                "it": "Center",
+                "ja": "Center",
+                "ko": "Center",
+                "ms": "Center",
+                "nb": "Center",
+                "nl": "Center",
+                "pt-BR": "Center",
+                "pt-PT": "Center",
+                "sv": "Center",
+                "th": "Center",
+                "zh-CN": "Center",
+                "zh-TW": "Center"
+              }
+            },
+            {
+              "value": "right",
+              "label": {
+                "da": "Right",
+                "de": "Right",
+                "en": "Right",
+                "es": "Right",
+                "fi": "Right",
+                "fr": "Right",
+                "hi": "Right",
+                "it": "Right",
+                "ja": "Right",
+                "ko": "Right",
+                "ms": "Right",
+                "nb": "Right",
+                "nl": "Right",
+                "pt-BR": "Right",
+                "pt-PT": "Right",
+                "sv": "Right",
+                "th": "Right",
+                "zh-CN": "Right",
+                "zh-TW": "Right"
+              }
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "id": "own-line",
+          "label": {
+            "da": "Give this content its own line",
+            "de": "Give this content its own line",
+            "en": "Give this content its own line",
+            "es": "Give this content its own line",
+            "fi": "Give this content its own line",
+            "fr": "Give this content its own line",
+            "hi": "Give this content its own line",
+            "it": "Give this content its own line",
+            "ja": "Give this content its own line",
+            "ko": "Give this content its own line",
+            "ms": "Give this content its own line",
+            "nb": "Give this content its own line",
+            "nl": "Give this content its own line",
+            "pt-BR":  "Give this content its own line",
+            "pt-PT":  "Give this content its own line",
+            "sv":  "Give this content its own line",
+            "th":  "Give this content its own line",
+            "zh-CN":  "Give this content its own line",
+            "zh-TW":  "Give this content its own line"
+          },
+          "default": false
         }
       ]
     },
@@ -1151,6 +1277,132 @@
               }
             }
           ]
+        },
+        {
+          "type": "select",
+          "id": "horiz-alignment",
+          "label": {
+            "da": "Horizontal alignment",
+            "de": "Horizontal alignment",
+            "en": "Horizontal alignment",
+            "es": "Horizontal alignment",
+            "fi": "Horizontal alignment",
+            "fr": "Horizontal alignment",
+            "hi": "Horizontal alignment",
+            "it": "Horizontal alignment",
+            "ja": "Horizontal alignment",
+            "ko": "Horizontal alignment",
+            "ms": "Horizontal alignment",
+            "nb": "Horizontal alignment",
+            "nl": "Horizontal alignment",
+            "pt-BR": "Horizontal alignment",
+            "pt-PT": "Horizontal alignment",
+            "sv": "Horizontal alignment",
+            "th": "Horizontal alignment",
+            "zh-CN": "Horizontal alignment",
+            "zh-TW": "Horizontal alignment"
+          },
+          "default": "center",
+          "options": [
+            {
+              "value": "left",
+              "label": {
+                "da": "Left",
+                "de": "Left",
+                "en": "Left",
+                "es": "Left",
+                "fi": "Left",
+                "fr": "Left",
+                "hi": "Left",
+                "it": "Left",
+                "ja": "Left",
+                "ko": "Left",
+                "ms": "Left",
+                "nb": "Left",
+                "nl": "Left",
+                "pt-BR": "Left",
+                "pt-PT": "Left",
+                "sv": "Left",
+                "th": "Left",
+                "zh-CN": "Left",
+                "zh-TW": "Left"
+              }
+            },
+            {
+              "value": "center",
+              "label": {
+                "da": "Center",
+                "de": "Center",
+                "en": "Center",
+                "es": "Center",
+                "fi": "Center",
+                "fr": "Center",
+                "hi": "Center",
+                "it": "Center",
+                "ja": "Center",
+                "ko": "Center",
+                "ms": "Center",
+                "nb": "Center",
+                "nl": "Center",
+                "pt-BR": "Center",
+                "pt-PT": "Center",
+                "sv": "Center",
+                "th": "Center",
+                "zh-CN": "Center",
+                "zh-TW": "Center"
+              }
+            },
+            {
+              "value": "right",
+              "label": {
+                "da": "Right",
+                "de": "Right",
+                "en": "Right",
+                "es": "Right",
+                "fi": "Right",
+                "fr": "Right",
+                "hi": "Right",
+                "it": "Right",
+                "ja": "Right",
+                "ko": "Right",
+                "ms": "Right",
+                "nb": "Right",
+                "nl": "Right",
+                "pt-BR": "Right",
+                "pt-PT": "Right",
+                "sv": "Right",
+                "th": "Right",
+                "zh-CN": "Right",
+                "zh-TW": "Right"
+              }
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "id": "own-line",
+          "label": {
+            "da": "Give this image its own line",
+            "de": "Give this image its own line",
+            "en": "Give this image its own line",
+            "es": "Give this image its own line",
+            "fi": "Give this image its own line",
+            "fr": "Give this image its own line",
+            "hi": "Give this image its own line",
+            "it": "Give this image its own line",
+            "ja": "Give this image its own line",
+            "ko": "Give this image its own line",
+            "ms": "Give this image its own line",
+            "nb": "Give this image its own line",
+            "nl": "Give this image its own line",
+            "pt-BR":  "Give this image its own line",
+            "pt-PT":  "Give this image its own line",
+            "sv":  "Give this image its own line",
+            "th":  "Give this image its own line",
+            "zh-CN":  "Give this image its own line",
+            "zh-TW":  "Give this image its own line"
+          },
+          "default": false
         }
       ]
     },
@@ -1945,6 +2197,32 @@
               }
             }
           ]
+        },
+        {
+          "type": "checkbox",
+          "id": "own-line",
+          "label": {
+            "da": "Give this image its own line",
+            "de": "Give this image its own line",
+            "en": "Give this image its own line",
+            "es": "Give this image its own line",
+            "fi": "Give this image its own line",
+            "fr": "Give this image its own line",
+            "hi": "Give this image its own line",
+            "it": "Give this image its own line",
+            "ja": "Give this image its own line",
+            "ko": "Give this image its own line",
+            "ms": "Give this image its own line",
+            "nb": "Give this image its own line",
+            "nl": "Give this image its own line",
+            "pt-BR":  "Give this image its own line",
+            "pt-PT":  "Give this image its own line",
+            "sv":  "Give this image its own line",
+            "th":  "Give this image its own line",
+            "zh-CN":  "Give this image its own line",
+            "zh-TW":  "Give this image its own line"
+          },
+          "default": false
         }
       ]
     },

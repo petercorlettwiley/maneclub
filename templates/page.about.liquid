@@ -1,0 +1,19 @@
+{% section 'custom-content' %}
+{%- if settings.social_instagram_link != blank -%}
+  <div class="about_page_links">
+    <a class="social-icons__link" href="{{ settings.social_instagram_link | escape }}" aria-describedby="a11y-external-message">
+      {%- include 'icon-instagram' -%}
+      <span class="icon__fallback-text">Instagram</span>
+    </a>
+  </div>
+{%- endif -%}
+<!--div class="page-width">
+  <div class="grid">
+    <div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
+
+      <div class="rte">
+        {{ page.content }}
+      </div>
+    </div>
+  </div>
+</div-->

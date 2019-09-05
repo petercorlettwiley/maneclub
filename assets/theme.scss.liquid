@@ -6905,7 +6905,7 @@ $toolbar-height-small: 46px;
     height: 0 !important;
     padding-bottom: 100% !important;
   }
-  
+
   .ratio-container:after {
     display: none;
   }
@@ -7128,6 +7128,41 @@ $toolbar-height-small: 46px;
 
   .collection-grid-item {
     margin-bottom: 0;
+  }
+}
+/* EDIT */
+/* Custom content horizontal alignment and full-page floating */
+.custom__item.horiz-align--center {
+  .custom__item-inner {
+    margin: 0 auto;
+  }
+}
+.custom__item.own_line {
+  width: 100%;
+}
+@media screen and (min-width: 750px) {
+  .custom__item.own_line {
+    &.medium-up--one-half {
+      .custom__item-inner {
+        width: 50%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 749px) {
+  .custom__item.own_line {
+    flex: 1 0 100%;
+    max-width: 100%;
+  }
+}
+/* EDIT */
+/* Custom social links addition to About page */
+.about_page_links {
+  padding: 0 30px;
+  text-align: center;
+
+  a {
+    display: inline-block;
   }
 }
 

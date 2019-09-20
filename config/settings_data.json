@@ -20,21 +20,22 @@
     "type_base_size": 14,
     "type_bold_product_titles": false,
     "share_image": "",
-    "share_facebook": true,
+    "share_facebook": false,
     "share_twitter": false,
     "share_pinterest": false,
     "social_twitter_link": "",
-    "social_facebook_link": "https:\/\/www.facebook.com\/maneclubnyc-344189932879410\/?fref=tag",
+    "social_facebook_link": "",
     "social_pinterest_link": "",
-    "social_instagram_link": "http:\/\/instagram.com\/maneclubnyc",
+    "social_instagram_link": "",
     "social_tumblr_link": "",
     "social_snapchat_link": "",
     "social_youtube_link": "",
     "social_vimeo_link": "",
     "favicon": "shopify:\/\/shop_images\/MC_logo_icon_5be3c678-271e-4da5-b012-11483d5290de.png",
     "enable_ajax": true,
-    "checkout_header_image": "",
-    "checkout_logo_image": "",
+    "hide_home_link": true,
+    "checkout_header_image": "shopify:\/\/shop_images\/MC_checkout_Banner.jpg",
+    "checkout_logo_image": "shopify:\/\/shop_images\/mane_club_logo_black_ab143a0e-5fdb-43db-a413-5e54cd395868.png",
     "checkout_logo_position": "left",
     "checkout_logo_size": "medium",
     "checkout_body_background_image": "",
@@ -55,12 +56,12 @@
           "logo": "shopify:\/\/shop_images\/mane_club_logo_black.png",
           "logo_max_width": 130,
           "main_linklist": "main-menu",
-          "message": false,
-          "home_page_only": true,
-          "message_text": "Announce something here",
+          "message": true,
+          "home_page_only": false,
+          "message_text": "FREE SHIPPING WHEN YOU BUY 3 OR MORE HAIR MASKS!",
           "message_link": "",
-          "color_bg": "#7796a8",
-          "color_text": "#fff"
+          "color_bg": "#ff00ec",
+          "color_text": "#ffffff"
         }
       },
       "hero": {
@@ -80,12 +81,14 @@
       "featured-collections": {
         "type": "collection",
         "settings": {
-          "title": "BEST SELLERS",
+          "title": "GOOP GANG",
           "collection": "hair-mask-collection",
           "grid": 3,
           "rows": 1,
           "show_vendor": false,
-          "show_view_all": false
+          "show_view_all": false,
+          "allow_mouseover_image": true,
+          "allow-gallery-scroll": true
         }
       },
       "footer": {
@@ -102,7 +105,7 @@
             "type": "text",
             "settings": {
               "title": "SOCIAL",
-              "text": "<p><a href=\"https:\/\/www.instagram.com\/maneclubnyc\/\" title=\"https:\/\/www.instagram.com\/maneclubnyc\/\">INSTAGRAM<\/a><\/p>\n<p><a href=\"https:\/\/www.instagram.com\/maneclubnyc\/\" title=\"https:\/\/www.instagram.com\/maneclubnyc\/\">FACEBOOK<\/a><\/p>"
+              "text": "<p><a href=\"https:\/\/www.instagram.com\/maneclubnyc\/\" title=\"https:\/\/www.instagram.com\/maneclubnyc\/\">INSTAGRAM<\/a><\/p>"
             }
           },
           "newsletter": {
@@ -132,7 +135,8 @@
           "show_collection_image": false,
           "show_vendor": false,
           "sort_enable": true,
-          "tags_enable": true
+          "tags_enable": true,
+          "allow_mouseover_image": false
         }
       },
       "product-template": {
@@ -143,14 +147,14 @@
           "show_variant_labels": false,
           "show_vendor": true,
           "enable_zoom": true,
-          "enable_payment_button": true,
+          "enable_payment_button": false,
           "show_share_buttons": false
         }
       },
       "product-recommendations": {
         "type": "product-recommendations",
         "settings": {
-          "show_product_recommendations": false,
+          "show_product_recommendations": true,
           "heading": "You may also like",
           "show_vendor": false
         }
@@ -158,10 +162,55 @@
       "1565273471186": {
         "type": "image-bar",
         "blocks": {
+          "1567639562862": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/banner_home_02_a_cruelty.png",
+              "alignment": "center",
+              "link": "",
+              "cta_label": ""
+            }
+          },
+          "1567639588837": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/banner_home_02_b_sulfates.png",
+              "alignment": "center",
+              "link": "",
+              "cta_label": ""
+            }
+          },
+          "1567639601596": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/banner_home_02_c_parabens.png",
+              "alignment": "center",
+              "link": "",
+              "cta_label": ""
+            }
+          },
           "1565273471186-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/free_ofs_STRIP_v5_9ddef2a5-5436-4374-bff7-219809fd377e.jpg",
+              "image": "shopify:\/\/shop_images\/banner_home_02_d_phthalates.png",
+              "alignment": "center",
+              "link": "",
+              "cta_label": ""
+            }
+          },
+          "1567639763811": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/banner_home_02_e_artificial.png",
+              "alignment": "center",
+              "link": "",
+              "cta_label": ""
+            }
+          },
+          "1567639795086": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/banner_home_02_f_gluten.png",
               "alignment": "center",
               "link": "",
               "cta_label": ""
@@ -169,10 +218,19 @@
           }
         },
         "block_order": [
-          "1565273471186-0"
+          "1567639562862",
+          "1567639588837",
+          "1567639601596",
+          "1565273471186-0",
+          "1567639763811",
+          "1567639795086"
         ],
         "settings": {
-          "section_height": "small"
+          "section_height": "small",
+          "full-width-small": true,
+          "three-per-row-small": true,
+          "single-row-large": true,
+          "additional-classes": "bottom_homepage_banner"
         }
       },
       "1565274920195": {
@@ -187,10 +245,28 @@
       "1565275051451": {
         "type": "image-bar",
         "blocks": {
+          "1567563592524": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/banner_home_01_a_cruelty.jpg",
+              "alignment": "center",
+              "link": "",
+              "cta_label": ""
+            }
+          },
           "1565275051451-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/MC_BANNER_SHOPIFY_V1_8ff384b5-4b50-4f9a-9c5a-2690da824e93.jpg",
+              "image": "shopify:\/\/shop_images\/banner_home_01_b_junk.jpg",
+              "alignment": "center",
+              "link": "",
+              "cta_label": ""
+            }
+          },
+          "1567563654726": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/banner_home_01_c_goop.jpg",
               "alignment": "center",
               "link": "",
               "cta_label": ""
@@ -198,10 +274,16 @@
           }
         },
         "block_order": [
-          "1565275051451-0"
+          "1567563592524",
+          "1565275051451-0",
+          "1567563654726"
         ],
         "settings": {
-          "section_height": "large"
+          "section_height": "medium",
+          "full-width-small": true,
+          "three-per-row-small": false,
+          "single-row-large": false,
+          "additional-classes": ""
         }
       },
       "article-template": {
@@ -218,6 +300,116 @@
           "layout": "grid",
           "blog_show_author": false,
           "blog_show_date": false
+        }
+      },
+      "image-bar": {
+        "type": "image-bar",
+        "blocks": {
+          "1567645784946": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/banner_madeinnyc.png",
+              "alignment": "center",
+              "link": "",
+              "cta_label": ""
+            }
+          }
+        },
+        "block_order": [
+          "1567645784946"
+        ],
+        "settings": {
+          "section_height": "large",
+          "full-width-small": true,
+          "three-per-row-small": false,
+          "single-row-large": false,
+          "additional-classes": ""
+        }
+      },
+      "custom-content": {
+        "type": "custom-content",
+        "blocks": {
+          "1567649436671": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/banner_madeinnyc.png",
+              "width": "100%",
+              "alignment": "center",
+              "horiz-alignment": "center",
+              "own-line": false
+            }
+          },
+          "1567649327364": {
+            "type": "text",
+            "settings": {
+              "title": "ABOUT MANE CLUB",
+              "text": "<p>MANE CLUB is an indie beauty brand born x raised in New York City.<\/p>\n<p>Driven by performance, product mix and aesthetic, MANE CLUB is a range of haircare products that you can wear and share without having to break the bank. Motivated by today&rsquo;s obsession with digital platforms, internet culture, memes and street style, MANE CLUB creates a beauty destination that embraces everything it means to be you, while living your best life in today&rsquo;s world.<\/p>\n<p>Conceived in 2018, Established in 2019.<\/p>",
+              "width": "50%",
+              "alignment": "center",
+              "align_text": "center",
+              "horiz-alignment": "center",
+              "own-line": true
+            }
+          },
+          "1567649454358": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/img_madeinnyc_postit.jpg",
+              "width": "25%",
+              "alignment": "center",
+              "horiz-alignment": "center",
+              "own-line": true
+            }
+          }
+        },
+        "block_order": [
+          "1567649436671",
+          "1567649327364",
+          "1567649454358"
+        ],
+        "settings": {
+          "title": "BORN X RAISED in NYC"
+        }
+      },
+      "custom-content-press": {
+        "type": "custom-content-press",
+        "blocks": {
+          "1567650063270": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/img_yespress_01.jpg",
+              "width": "50%",
+              "alignment": "top-middle",
+              "horiz-alignment": "center",
+              "own-line": false,
+              "text": "<p><em><strong>MEET YOUR NEW HAIR HEROES<\/strong><\/em><\/p>\n<p><a href=\"https:\/\/www.allure.com\/gallery\/best-new-hair-products-july-2019\" title=\"https:\/\/www.allure.com\/gallery\/best-new-hair-products-july-2019\">Read More<\/a><\/p>"
+            }
+          },
+          "1567650191329": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/img_yespress_02.jpg",
+              "width": "50%",
+              "alignment": "top-middle",
+              "horiz-alignment": "center",
+              "own-line": false,
+              "text": "<p><em><strong>ALL THE COOLEST HAIR-CARE PRODUCTS<\/strong><\/em><\/p>\n<p><a href=\"https:\/\/www.glamour.com\/gallery\/best-hair-product-launches\" title=\"https:\/\/www.glamour.com\/gallery\/best-hair-product-launches\">Read More<\/a><\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1567650063270",
+          "1567650191329"
+        ],
+        "settings": {
+          "title": "Custom content"
+        }
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "settings": {
+          "cart_ajax_enable": true,
+          "cart_notes_enable": false
         }
       }
     },

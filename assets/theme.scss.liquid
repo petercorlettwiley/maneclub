@@ -1870,9 +1870,9 @@ a[href^="tel"] {
 
   &:not([disabled]):hover,
   &:focus {
-    background-color: transparent;
-    color: $color-btn-primary-focus;
-    border-color: $color-btn-primary-focus;
+    background-color: $color-btn-primary;
+    color: $color-body;
+    border-color: $color-btn-primary;
   }
 }
 
@@ -1887,9 +1887,9 @@ a[href^="tel"] {
 
   &:not([disabled]):hover,
   &:focus {
-    background-color:$color-body;
-    color: $color-btn-primary-focus;
-    border-color: $color-btn-primary-focus;
+    background-color: $color-btn-primary;
+    color: $color-body;
+    border-color: $color-btn-primary;
   }
 }
 
@@ -7170,6 +7170,31 @@ $toolbar-height-small: 46px;
   }
 }
 /* EDIT */
+/* About page gets full-width hero image */
+.about_page {
+  max-width: none;
+
+  .full-page {
+    width: calc(100% + 110px);
+    max-width: none;
+    margin-left: -55px;
+    padding-left: 0;
+    padding-right: 0;
+
+    .custom__item-inner--image {
+      overflow: hidden;
+    }
+
+    .custom__item-inner--image,
+    .custom__item-inner--image img {
+      max-width: none !important;
+    }
+    .custom__item-inner--image img {
+      max-height: none !important;
+    }
+  }
+}
+/* EDIT */
 /* Custom styles for press page */
 .press_page .custom__item .custom__item-inner--image {
   max-height: none !important;
@@ -7213,6 +7238,21 @@ $toolbar-height-small: 46px;
   position: absolute;
   top: 0;
 }
+
+/* EDIT
+Full width hero image option for pages */
+//.custom__item.full-page.align--center.horiz-align--center {
+//  max-width: none;
+//  width: calc(100% + 130px);
+//  margin-left: -65px;
+//  margin-right: -65px;
+//
+//  .custom__item-inner,
+//  .custom__item-inner img {
+//    max-width: none !important;
+//    max-height: none !important;
+//  }
+//}
 
 /*================ Flex item alignment ================*/
 .align--top-middle {

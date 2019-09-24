@@ -6927,7 +6927,11 @@ $toolbar-height-small: 46px;
 a.grid-view-item__link,
 .image-bar,
 .rap__med__wrap__inside {
-  cursor: url("https://cdn.shopify.com/s/files/1/0260/5894/8682/files/MC_mouse_BW_face_small_b06a54b6-a48b-422d-85b9-1e67821b7774.png?v=1569262805"), auto !important;
+  cursor: url('https://cdn.shopify.com/s/files/1/0260/5894/8682/files/MC_mouse_BW_face_1x_217b0d44-22f4-4534-bf94-b10bc744e63b.png?v=1569367628'), auto;
+  cursor: -webkit-image-set(
+    url('https://cdn.shopify.com/s/files/1/0260/5894/8682/files/MC_mouse_BW_face_1x_217b0d44-22f4-4534-bf94-b10bc744e63b.png?v=1569367628') 1x,
+    url('https://cdn.shopify.com/s/files/1/0260/5894/8682/files/MC_mouse_BW_face_2x_d2e68fd4-d009-4761-a887-90f522ba8b42.png?v=1569367670"') 2x
+  ), auto;
 }
 
 /* EDIT */
@@ -7200,6 +7204,20 @@ a.grid-view-item__link,
   a {
     display: inline-block;
   }
+}
+/* EDIT */
+/* Custom IG icon in footer */
+a[title = 'https://www.instagram.com/maneclubnyc/'] {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-size: 0;
+  line-height: 18px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+a[title = 'https://www.instagram.com/maneclubnyc/']:before {
+  content: "\f16d";
+  font-size: 18px !important;
 }
 /* EDIT */
 /* About page gets full-width hero image */

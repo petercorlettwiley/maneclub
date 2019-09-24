@@ -415,7 +415,7 @@
       "1569022541562": {
         "type": "custom-html",
         "settings": {
-          "html": "<div id=\"rap__med__instagram\"><\/div>\n<script src=\"https:\/\/theraptormedia.com\/instagram\/embed.js\" data-id=\"mane-club.myshopify.com\"><\/script>\n<style type=\"text\/css\">#rap__med__instagram {\n  clear: none !important;\n  float: none !important;\n  width: auto !important;\n  max-width: 960px !important;\ndisplay: block !important;\nmargin: 0 auto !important;\n}\n#rap__med__insta {\n}<\/style>"
+          "html": "<div id=\"rap__med__instagram\"><\/div>\n<script src=\"https:\/\/theraptormedia.com\/instagram\/embed.js\" data-id=\"mane-club.myshopify.com\"><\/script>\n<style type=\"text\/css\">#rap__med__instagram {\n  clear: none !important;\n  float: none !important;\n  width: auto !important;\n  max-width: 960px !important;\ndisplay: block !important;\nmargin: 0 auto !important;\n}\n.rap__med__insta__popup {\n  opacity: 0 !important;\n  pointer-events: none !important;\n}<\/style>"
         }
       }
     },

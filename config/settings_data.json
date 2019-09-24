@@ -333,7 +333,7 @@
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/banner_madeinnyc.png",
-              "width": "100%",
+              "width": "Full Page",
               "alignment": "center",
               "horiz-alignment": "center",
               "own-line": false
@@ -411,6 +411,12 @@
           "cart_ajax_enable": true,
           "cart_notes_enable": false
         }
+      },
+      "1569022541562": {
+        "type": "custom-html",
+        "settings": {
+          "html": "<div id=\"rap__med__instagram\"><\/div>\n<script src=\"https:\/\/theraptormedia.com\/instagram\/embed.js\" data-id=\"mane-club.myshopify.com\"><\/script>\n<style type=\"text\/css\">#rap__med__instagram {\n  clear: none !important;\n  float: none !important;\n  width: auto !important;\n  max-width: 960px !important;\ndisplay: block !important;\nmargin: 0 auto !important;\n}\n#rap__med__insta {\n}<\/style>"
+        }
       }
     },
     "content_for_index": [
@@ -418,6 +424,7 @@
       "featured-collections",
       "1565275051451",
       "1565274920195",
+      "1569022541562",
       "1565273471186"
     ]
   },

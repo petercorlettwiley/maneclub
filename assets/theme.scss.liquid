@@ -2555,11 +2555,33 @@ textarea {
 }
 
 .site-nav__label {
-  border-bottom: 1px solid transparent;
+  /* EDIT change nav links */
+  //border-bottom: 1px solid transparent;
+  //color: $color-btn-primary;
 
   .site-nav__link--active & {
-    border-bottom-color: $color-text;
+    color: $color-btn-primary;
   }
+}
+
+/* EDIT */
+/* change review buttons */
+.yotpo .yotpo-default-button,.yotpo input[type="button"].yotpo-default-button {
+  font-family: Poppins,sans-serif !important;
+  font-size: 12px;
+  padding: 10px 15px;
+  border-radius: 2px !important;
+  background: #fc0000 !important;
+  color: #fff;
+  height: auto;
+  margin: 0 0 5px 0
+}
+.yotpo span {
+  font-family: Poppins,sans-serif !important;
+}
+.yotpo .yotpo-first-review .yotpo-first-review-stars .yotpo-icon-star {
+  color: #000 !important;
+  font-size: 22px;
 }
 
 .site-nav__link--button {
@@ -6898,6 +6920,16 @@ $toolbar-height-small: 46px;
     }
   }
 }
+
+/* EDIT */
+/* image rollover */
+.hero__inner,
+a.grid-view-item__link,
+.image-bar,
+.rap__med__wrap__inside {
+  cursor: url("https://cdn.shopify.com/s/files/1/0260/5894/8682/files/MC_mouse_BW_face_small_b06a54b6-a48b-422d-85b9-1e67821b7774.png?v=1569262805"), auto !important;
+}
+
 /* EDIT */
 /* image bar edit: custom homepage banner at bottom */
 .bottom_homepage_banner {

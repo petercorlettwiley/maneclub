@@ -37,6 +37,7 @@
 
   <ul class="grid grid--uniform grid--view-items{% if section.settings.allow-gallery-scroll %} gallery-scroller-list{% endif %}">
     {% for product in collection.products limit: product_limit %}
+{%- include 'bold-product' with product, hide_action: 'skip' -%}
       <li class="grid__item grid__item--{{section.id}} {{ grid_item_width }}">
         {% include 'product-card-grid', max_height: max_height %}
       </li>

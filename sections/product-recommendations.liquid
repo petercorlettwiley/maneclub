@@ -1,3 +1,4 @@
+{%- include 'bold-product' with product, hide_action: 'break', output: 'none' -%}
 {%- if section.settings.show_product_recommendations -%}
   {%- if recommendations.performed -%}
     {%- if recommendations.products_count > 0 -%}

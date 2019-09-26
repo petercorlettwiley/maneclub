@@ -3017,6 +3017,11 @@ theme.Cart = (function() {
             }
 
             this._setCartCountBubble(state.item_count);
+            
+            if(typeof trigger_messages == 'function'){
+              trigger_messages();
+            }
+            
           }.bind(this)
         )
         .fail(
@@ -3529,6 +3534,11 @@ theme.Cart = (function() {
             }
 
             this._setCartCountBubble(state.item_count);
+            
+            if(typeof trigger_messages == 'function'){
+              trigger_messages();
+            }
+            
           }.bind(this)
         )
         .fail(
@@ -4211,6 +4221,11 @@ theme.Product = (function() {
           function(item) {
             this._hideErrorMessage();
             this._setupCartPopup(item);
+
+            if(typeof trigger_messages == 'function'){
+              trigger_messages();
+            }
+            
           }.bind(this)
         )
         .fail(

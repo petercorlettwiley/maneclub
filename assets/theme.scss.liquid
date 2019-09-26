@@ -7207,17 +7207,24 @@ a.grid-view-item__link,
 }
 /* EDIT */
 /* Custom IG icon in footer */
-a[title = 'https://www.instagram.com/maneclubnyc/'] {
+a[title='https://www.instagram.com/maneclubnyc/'] {
   display: inline-block;
-  font-family: FontAwesome;
   font-size: 0;
   line-height: 18px;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
+  opacity: 1;
 }
-a[title = 'https://www.instagram.com/maneclubnyc/']:before {
-  content: "\f16d";
+a[title='https://www.instagram.com/maneclubnyc/']:hover {
+  opacity: 0.65;
+}
+a[title='https://www.instagram.com/maneclubnyc/']:before {
+  content: "";
+  display: block;
   font-size: 18px !important;
+  width: 1em !important;
+  height: 1em !important;
+  background-image: url('https://cdn.shopify.com/s/files/1/0260/5894/8682/files/insta.png?v=1569509866');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 /* EDIT */
 /* About page gets full-width hero image */

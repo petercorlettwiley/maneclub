@@ -18,6 +18,7 @@
         </thead>
         <tbody data-cart-line-items>
           {%- for item in cart.items -%}
+{%- include 'bold-cart-item' with item -%}
             <tr class="cart__row" data-cart-item data-cart-item-key="{{ item.key }}" data-cart-item-url="{{ item.url }}" data-cart-item-title="{{ item.title }}" data-cart-item-index="{{ forloop.index }}" data-cart-item-quantity="{{ item.quantity }}">
               <td class="cart__meta small--text-left" data-cart-table-cell>
                 <div class="cart__product-information">
@@ -166,7 +167,7 @@
                     {{ 'cart.label.qty' | t }}
                   </label>
                   <input id="updates_{{ item.key }}" class="cart__qty-input" type="number"
-                    value="{{ item.quantity }}" min="0" pattern="[0-9]*"
+                    value="{{ item.quantity }}" {{ bold_qty_attr }}  min="0" pattern="[0-9]*"
                     data-quantity-input data-quantity-item="{{ forloop.index }}" data-quantity-input-mobile>
                 </div>
                 <div class="cart__qty-error-message-wrapper cart__qty-error-message-wrapper--mobile hide" role="alert" data-cart-quantity-error-message-wrapper>

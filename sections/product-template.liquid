@@ -1,3 +1,4 @@
+{%- include 'bold-product' with product, hide_action: 'break', output: 'none' -%}
 <div class="product-template__container page-width"
   id="ProductSection-{{ section.id }}"
   data-section-id="{{ section.id }}"
@@ -152,6 +153,7 @@
 
             <select name="id" id="ProductSelect-{{ section.id }}" class="product-form__variants no-js">
               {% for variant in product.variants %}
+{%- include 'bold-variant' with variant, hide_action: 'skip' -%}
                 {% if variant.available %}
                   <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">
                     {{ variant.title }}

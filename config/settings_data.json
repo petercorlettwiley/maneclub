@@ -58,7 +58,7 @@
           "main_linklist": "main-menu",
           "message": true,
           "home_page_only": false,
-          "message_text": "FREE SHIPPING WHEN YOU BUY 3 OR MORE HAIR MASKS! (US ONLY)",
+          "message_text": "SPEND $10 & GET FREE SHIPPING! (US ONLY)",
           "message_link": "",
           "color_bg": "#ff00ec",
           "color_text": "#ffffff"
@@ -378,7 +378,7 @@
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/img_yespress_01.jpg",
-              "width": "50%",
+              "width": "33%",
               "alignment": "top-middle",
               "horiz-alignment": "center",
               "own-line": false,
@@ -389,17 +389,29 @@
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/img_yespress_02.jpg",
-              "width": "50%",
+              "width": "33%",
               "alignment": "top-middle",
               "horiz-alignment": "center",
               "own-line": false,
               "text": "<p><em><strong>ALL THE COOLEST HAIR-CARE PRODUCTS<\/strong><\/em><\/p>\n<p><a href=\"https:\/\/www.glamour.com\/gallery\/best-hair-product-launches\" title=\"https:\/\/www.glamour.com\/gallery\/best-hair-product-launches\">Read More<\/a><\/p>"
             }
+          },
+          "1569945355923": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/MC_yasss_press_popsugar.jpg",
+              "width": "33%",
+              "alignment": "center",
+              "horiz-alignment": "center",
+              "own-line": false,
+              "text": "<p><em><strong>THE OFFICIAL FALL EDITOR WISH LIST<\/strong><\/em><\/p>\n<p><a href=\"https:\/\/www.glamour.com\/gallery\/best-hair-product-launches\" title=\"https:\/\/www.glamour.com\/gallery\/best-hair-product-launches\">Read More<\/a><\/p>"
+            }
           }
         },
         "block_order": [
           "1567650063270",
-          "1567650191329"
+          "1567650191329",
+          "1569945355923"
         ],
         "settings": {
           "title": "Custom content"
